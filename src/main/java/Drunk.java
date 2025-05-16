@@ -122,4 +122,14 @@ public class Drunk {
                         try {
                             tokenizer = new StringTokenizer(reader.readLine());
                         } catch (IOException e) {
+
+
+
+
+                            while (tokenizer == null || !tokenizer.hasMoreTokens()) {
+                                try {
+                                    tokenizer = new StringTokenizer(reader.readLine());
+                                } catch (IOException e) {
+
+                                }
                             throw new RuntimeException(e)
